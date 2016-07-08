@@ -2046,7 +2046,7 @@
     var ramlProcessor, errorProcessor, whenParsed, PARSE_SUCCESS = 'event:raml-parsed';
 
     var load = function(file) {
-      setPromise(ramlParser.loadFile(file));
+      setPromise(ramlParser.loadFile(file, { dereferenceSchemas: true }));
     };
 
     var parse = function(raml) {
